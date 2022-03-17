@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
 import "../../styles/home.css";
-import { Card } from "../component/card";
+import { CharacterCard } from "../component/characterCard";
+import { PlanetCard } from "../component/planetCard";
+import { VehicleCard } from "../component/vehicleCard";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
@@ -12,7 +14,10 @@ export const Home = () => {
 			{store.characters.length > 0 &&  
 				store.characters.map( ( item,index)=>{
 					return(
-						<Card key={index} data= {item} />
+						
+						<CharacterCard key={index} data= {item} />
+			
+
 					)
 				}) 
 			}
@@ -22,8 +27,8 @@ export const Home = () => {
 			{store.planets.length > 0 && 
 			store.planets.map((item,index) =>{
 				return(
-					<Card key={index} data = {item}/>
-				)
+					<PlanetCard key={index} data= {item} />
+					)
 		})}
 
 		</div>
@@ -32,7 +37,7 @@ export const Home = () => {
 		{store.vehicles.length > 0 && 
 			store.vehicles.map((item,index) =>{
 				return(
-					<Card key={index} data = {item}/>
+					<VehicleCard key={index} data = {item}/>
 				)
 		})}
 		</div>
