@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export const PlanetCard  = (props) => {
 	return(
@@ -9,7 +10,9 @@ export const PlanetCard  = (props) => {
                             <h5 className="PlanetCard-title">{props.data.name}</h5>
                             <p className="PlanetCard-text">Population: {props.data.population}</p>
                             <p className="PlanetCard-text">Terrain: {props.data.terrain}</p>
-                            <a href="#" className="btn btn-primary">Learn more!</a>
+                            <Link to={`/single/planets/${props.id}`}>
+                            <button href="#" className="btn btn-primary">Learn more!</button>
+                            </Link>
                         </div>
                     </div>              
     )
@@ -17,7 +20,8 @@ export const PlanetCard  = (props) => {
     };
 
     PlanetCard.propTypes ={
-        data : PropTypes.object
+        data : PropTypes.object,
+        id: PropTypes.integer
     }
 
     

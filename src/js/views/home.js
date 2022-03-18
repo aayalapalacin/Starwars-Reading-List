@@ -15,7 +15,7 @@ export const Home = () => {
 				store.characters.map( ( item,index)=>{
 					return(
 						
-						<CharacterCard key={index} data= {item} />
+						<CharacterCard key={index} data= {item} id={index} />
 			
 
 					)
@@ -27,7 +27,7 @@ export const Home = () => {
 			{store.planets.length > 0 && 
 			store.planets.map((item,index) =>{
 				return(
-					<PlanetCard key={index} data= {item} />
+					<PlanetCard key={index} data= {item} id={index} />
 					)
 		})}
 
@@ -37,7 +37,7 @@ export const Home = () => {
 		{store.vehicles.length > 0 && 
 			store.vehicles.map((item,index) =>{
 				return(
-					<VehicleCard key={index} data = {item}/>
+					<VehicleCard key={index} data = {item} id={index}/>
 				)
 		})}
 		</div>
