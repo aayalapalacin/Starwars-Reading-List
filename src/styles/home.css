@@ -10,12 +10,26 @@
     white-space: nowrap;
 }
 
-button{
+
+.btn .btn-outline-primary{
     margin: 5% 100% 5% 6%;
     white-space: nowrap;
     padding: 3% 4%;
 }
 
+.btn .btn-outline-warning{
+    margin: 5% 6% 5% 100%;
+}
+
+/* button{
+    margin: 5% 100% 5% 6%;
+    white-space: nowrap;
+    padding: 3% 4%;
+} */
+
+.btDiv{
+    display: flex;
+}
 .h2Title{
     margin: 1% 100% 4% 0;
     color: rgb(221, 98, 60);

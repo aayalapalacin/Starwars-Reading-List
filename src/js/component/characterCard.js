@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
+
 
 export const CharacterCard  = (props) => {
 	return(
@@ -12,7 +16,10 @@ export const CharacterCard  = (props) => {
                             <p className="Card-text">Hair-Color: {props.data.hair_color}</p>
                             <p className="Card-text">Eye-Color: {props.data.eye_color}</p>
                             <Link to={`/single/characters/${props.id}`}>
+                            <div className="btDiv">
                             <button href="#" className="btn btn-outline-primary">Learn more!</button>
+                            <button type="button" class="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
+                            </div>
                             </Link>
                         </div>
                     </div>              
