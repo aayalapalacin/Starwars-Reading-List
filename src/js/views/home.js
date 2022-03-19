@@ -8,9 +8,9 @@ import { Context } from "../store/appContext";
 export const Home = () => {
 	const {store,actions} = useContext(Context);
 	return(
-	<div className="text-center mt-5  ">
-		<h2>Characters</h2>
-		<div className="characters d-flex">
+	<div className="text-center mt-3 container  ">
+		<h2 className="h2Title">Characters</h2>
+		<div className="characters">
 			{store.characters.length > 0 &&  
 				store.characters.map( ( item,index)=>{
 					return(
@@ -22,7 +22,7 @@ export const Home = () => {
 				}) 
 			}
 		</div>
-		<h2>Planets</h2>
+		<h2 className="h2Title">Planets</h2>
 		<div className="planets d-flex">
 			{store.planets.length > 0 && 
 			store.planets.map((item,index) =>{
@@ -32,7 +32,7 @@ export const Home = () => {
 		})}
 
 		</div>
-		<h2>Vehicles</h2>
+		<h2 className="h2Title">Vehicles</h2>
 		<div className="vehicles d-flex">
 		{store.vehicles.length > 0 && 
 			store.vehicles.map((item,index) =>{
