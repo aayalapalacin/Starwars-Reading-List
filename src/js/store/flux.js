@@ -10,6 +10,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			vehicles:[
 
+			],
+			favorites:[
+				
 			]
 		},
 		actions: {
@@ -28,6 +31,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					).then(data => setStore({ vehicles: data.results }));
 			},
 			
+			addFavorites: (data) => {
+				const store = getStore()
+				store.favorites.push(data)
+				setStore(store)
+			}
 		}
 	};
 };

@@ -15,7 +15,7 @@ export const Home = () => {
 				store.characters.map( ( item,index)=>{
 					return(
 						
-						<CharacterCard key={index} data= {item} id={index} />
+						<CharacterCard addFavorite={actions.addFavorite} key={index} data= {item} id={index} />
 			
 
 					)

@@ -18,9 +18,9 @@ export const CharacterCard  = (props) => {
                             <Link to={`/single/characters/${props.id}`}>
                             <div className="btDiv">
                             <button href="#" className="btn btn-outline-primary">Learn more!</button>
-                            <button type="button" class="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
                             </div>
                             </Link>
+                            <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
                         </div>
                     </div>              
     )
