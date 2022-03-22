@@ -20,14 +20,14 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Favorites
+              Favorites {store.favorites.length}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               { store.favorites.length > 0 ? store.favorites.map((item,index) => {
 				  return (
 					<li key={index}>
-					<a className="dropdown-item" href="#">
-					  {item.name}
+					<a className="dropdown-item" href="#" onClick={() => actions.removeFavorites(index)}>
+					  {item.name} 
 					</a>
 				  </li>
 				  );

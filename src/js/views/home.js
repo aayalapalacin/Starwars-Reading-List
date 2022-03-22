@@ -7,6 +7,7 @@ import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const {store,actions} = useContext(Context);
+	console.log(store.favorites)
 	return(
 	<div className="text-center mt-3 container  ">
 		<h2 className="h2Title">Characters</h2>
@@ -15,7 +16,7 @@ export const Home = () => {
 				store.characters.map( ( item,index)=>{
 					return(
 						
-						<CharacterCard addFavorite={actions.addFavorite} key={index} data= {item} id={index} />
+						<CharacterCard addFavorite={actions.addFavorites} key={index} data= {item} id={index} />
 			
 
 					)
