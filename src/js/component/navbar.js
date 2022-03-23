@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faTrashArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 
 export const Navbar = () => {
@@ -26,8 +28,8 @@ export const Navbar = () => {
               { store.favorites.length > 0 ? store.favorites.map((item,index) => {
 				  return (
 					<li key={index}>
-					<a className="dropdown-item" href="#" onClick={() => actions.removeFavorites(index)}>
-					  {item.name} 
+					<a className="dropdown-item" href="#">
+					  {item.name} <span onClick={() => actions.removeFavorites(index)}> <FontAwesomeIcon icon={faTrashArrowUp}></FontAwesomeIcon> </span>
 					</a>
 				  </li>
 				  );
