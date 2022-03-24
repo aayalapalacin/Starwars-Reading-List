@@ -43,3 +43,13 @@
     margin-right:3.5%;
     border: groove 1.8px rgba(0, 0, 0, 0.4);
 }
+
+.singleText{
+    text-align: center;
+}
+
+.navbarImage{
+    width: 5%;
+    height: 3%;
+    padding-left: 3%;
+}

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faTrashArrowUp } from "@fortawesome/free-solid-svg-icons";
+import "../../styles/home.css";
+
 
 
 export const Navbar = () => {
@@ -10,7 +12,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light mb-3">
       <Link to="/">
-        <span className="navbar-brand mb-0 h1">React Boilerplate</span>
+        <span className="navbar-brand mb-0 h1"><img className="navbarImage" src="https://clipart.info/images/ccovers/1513370389Star%20Wars%20Logo%20transparent%20PNG.png"/></span>
       </Link>
       <div className="ml-auto">
         <Link to="/demo">
