@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export const PlanetCard  = (props) => {
 	return(
@@ -13,6 +15,8 @@ export const PlanetCard  = (props) => {
                             <Link to={`/single/planets/${props.id}`}>
                             <button href="#" className="btn btn-outline-primary">Learn more!</button>
                             </Link>
+                            <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
+
                         </div>
                     </div>              
     )
