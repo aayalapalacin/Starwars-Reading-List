@@ -19,7 +19,7 @@ export const CharacterCard  = (props) => {
                                 <Link to={`/single/characters/${props.id}`}>
                                 <button href="#" className="btn btn-outline-primary">Learn more!</button>
                                 </Link>
-                                <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button> 
+                                <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning heartIcon"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button> 
                             </div>                               
                         </div>
                     </div>              
