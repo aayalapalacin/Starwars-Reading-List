@@ -13,10 +13,12 @@ export const VehicleCard  = (props) => {
                             <h5 className="Card-title">{props.data.name}</h5>
                             <p className="Card-text">Model: {props.data.model}</p>
                             <p className="Card-text">Vehicle-Class: {props.data.vehicle_class}</p>
-                            <Link to={`/single/vehicles/${props.id}`}>
-                            <button href="#" className="btn btn-outline-primary">Learn more!</button>
-                            </Link>
-                            <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
+                            <div className="btDiv">
+                                <Link to={`/single/vehicles/${props.id}`}>
+                                <button href="#" className="btn btn-outline-primary">Learn more!</button>
+                                </Link>
+                                <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button> 
+                            </div>                               
                         </div>
                     </div>              
     )

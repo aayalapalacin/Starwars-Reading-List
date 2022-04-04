@@ -28,7 +28,7 @@ export const Home = () => {
 			{store.planets.length > 0 && 
 			store.planets.map((item,index) =>{
 				return(
-					<PlanetCard key={index} data= {item} id={index} />
+					<PlanetCard addFavorite={actions.addFavorites} key={index} data= {item} id={index} />
 					)
 		})}
 
@@ -38,12 +38,10 @@ export const Home = () => {
 		{store.vehicles.length > 0 && 
 			store.vehicles.map((item,index) =>{
 				return(
-					<VehicleCard key={index} data = {item} id={index}/>
+					<VehicleCard addFavorite={actions.addFavorites} key={index} data = {item} id={index}/>
 				)
 		})}
-		</div>
-		
-						
+		</div>			
 	</div>
 	
 	)

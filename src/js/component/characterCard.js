@@ -15,12 +15,12 @@ export const CharacterCard  = (props) => {
                             <p className="Card-text">Gender: {props.data.gender}</p>
                             <p className="Card-text">Hair-Color: {props.data.hair_color}</p>
                             <p className="Card-text">Eye-Color: {props.data.eye_color}</p>
-                            <Link to={`/single/characters/${props.id}`}>
                             <div className="btDiv">
-                            <button href="#" className="btn btn-outline-primary">Learn more!</button>
-                            </div>
-                            </Link>
-                            <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button>                                
+                                <Link to={`/single/characters/${props.id}`}>
+                                <button href="#" className="btn btn-outline-primary">Learn more!</button>
+                                </Link>
+                                <button onClick={() => props.addFavorite(props.data) } type="button" className="btn btn-outline-warning"><FontAwesomeIcon icon={faHeart}></FontAwesomeIcon></button> 
+                            </div>                               
                         </div>
                     </div>              
     )

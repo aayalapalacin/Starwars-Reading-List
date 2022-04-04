@@ -59,31 +59,91 @@ export const Single = props => {
 				
 				:
 				params.type == "planets" ?
-					<div>
-						<p>
-							Climate: {data.climate}
-						</p>
-
-						<p>
-							Terrain: {data.terrain}
-						</p>
-						<p>
-							Population: {data.population}
-						</p>
-					</div> :
+					<div className="container">
+					<div className="row">
+						<div className="col-6">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnr3avebwcV911YoWbSC0l8HwMo59SwE7CA&usqp=CAU" className="singleImage" alt="..."/> 
+						</div>
+						<div className="col-6">
+							<h1 className="singleText">
+							{data.name}
+							</h1>
+							<p className="singleText">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non porttitor sapien, id porttitor leo. Pellentesque vulputate volutpat nibh, non sollicitudin nisi suscipit at. Aliquam egestas id ante vitae mattis. Nam scelerisque tempor nisl, vitae dapibus turpis egestas non. Nunc congue tincidunt metus nec vestibulum. Suspendisse potenti. Nam feugiat neque ac pharetra consequat.
+							</p>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-12">
+							<table class="table table-borderless">
+								<thead>
+									<tr>
+									<th scope="col">Name</th>
+										<th scope="col">Climate</th>
+										<th scope="col">Terrain</th>
+										<th scope="col">Population</th>
+										<th scope="col">Diameter</th>
+										<th scope="col">Gravity</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{data.name}</td>
+										<td>{data.climate}</td>
+										<td>{data.terrain}</td>
+										<td>{data.population}</td>
+										<td>{data.diameter}</td>
+										<td>{data.gravity}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>						
+					</div>
+				</div> 
+					:
 					params.type == "vehicles" ?
-						<div>
-							<p>
-								Cost: {data.cost_in_credits}
+					<div className="container">
+					<div className="row">
+						<div className="col-6">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnr3avebwcV911YoWbSC0l8HwMo59SwE7CA&usqp=CAU" className="singleImage" alt="..."/> 
+						</div>
+						<div className="col-6">
+							<h1 className="singleText">
+							{data.name}
+							</h1>
+							<p className="singleText">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non porttitor sapien, id porttitor leo. Pellentesque vulputate volutpat nibh, non sollicitudin nisi suscipit at. Aliquam egestas id ante vitae mattis. Nam scelerisque tempor nisl, vitae dapibus turpis egestas non. Nunc congue tincidunt metus nec vestibulum. Suspendisse potenti. Nam feugiat neque ac pharetra consequat.
 							</p>
-
-							<p>
-								Capacity: {data.cargo_capacity}
-							</p>
-							<p>
-								Speed: {data.max_atmosphering_speed}
-							</p>
-						</div> :
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-12">
+							<table class="table table-borderless">
+								<thead>
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">Model</th>
+										<th scope="col">Cost</th>
+										<th scope="col">Speed</th>
+										<th scope="col">Passengers</th>
+										<th scope="col">Class</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{data.name}</td>
+										<td>{data.model}</td>
+										<td>{data.cost_in_credits}</td>
+										<td>{data.max_atmosphering_speed}</td>
+										<td>{data.passengers}</td>
+										<td>{data.vehicle_class}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>						
+					</div>
+				</div> :
 						<p>data not found</p>}
 		</div>
 	);

@@ -29,6 +29,7 @@
 
 .btDiv{
     display: flex;
+    justify-content: space-between;
 }
 .h2Title{
     margin: 1% 100% 4% 0;
@@ -55,8 +56,7 @@
 }
 
 .horizontalScroll{
-    overflow: auto;
-    white-space: nowrap;
-    text-align: center;
-    justify-content: space-around;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
 }
